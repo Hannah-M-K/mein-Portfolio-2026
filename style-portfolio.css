@@ -1,0 +1,230 @@
+:root {
+    /* Farben */
+    --color-bg: #F1E6D2;
+    --color-secondary-bg: #B9E6F2;
+    --color-surface: #3FB6C6;
+    --color-primary: #8F3035;
+    --color-accent: #C4A66A;
+    --color-accent-dark: #d6a74b;
+    --color-text: #182B3A;
+
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "navigation"
+        "cover-page"
+        "porfolio"
+        "kontakt-info";
+
+    gap: 20px;
+    overflow: scroll;
+}
+
+nav {
+    grid-area: navigation;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    max-height: 50px;
+    background-color: var(--color-bg);
+    box-shadow: inset 0 0 15px var(--color-accent);
+    padding: 1rem;
+    border-radius: 60px;
+    border: 1px solid var(--color-text);
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav h1 {
+    font-size: 25px;
+    color: var(--color-text);
+    cursor: default;
+    padding: 1rem;
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: auto;
+    margin-left: auto;
+    gap: 30px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+
+nav [aria-current] a {
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border: 1px solid var(--color-text);
+
+    border-radius: 60px;
+
+    padding: 0.5rem;
+
+}
+
+nav a:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border: 1px solid var(--color-primary);
+    border-radius: 60px;
+    padding: 0.5rem;
+}
+
+.schulprojekte {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-primary);
+    box-shadow: inset 0 0 7px var(--color-accent);
+    text-align: center;
+}
+
+.leperello {
+    display: flex;
+    flex-direction: row;
+    height: 430px;
+    width: 1310px;
+    padding: 1rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+
+}
+
+.leperello figcaption {
+    text-align: start;
+    line-height: 1.5rem;
+    font-size: 19px;
+    width: 608px;
+
+}
+
+.leperello img {
+    height: 410px;
+
+}
+
+.tee_pixie {
+    display: flex;
+    text-align: start;
+    margin-top: 1%;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    font-size: 19px;
+}
+
+.teebeutel img {
+    width: 300px;
+    height: 530px;
+    object-fit: contain;
+    transition: 1s;
+}
+
+.teebeutel img:hover {
+    width: 600px;
+    height: 830px;
+}
+
+.teebeutel {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.pixiebuch img {
+    width: auto;
+    height: 530px;
+
+}
+
+.pixiebuch figcaption {
+
+    font-size: 19px;
+}
+
+
+.firefly {
+
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-primary);
+    box-shadow: inset 0 0 7px var(--color-accent);
+    padding: 1rem;
+    text-align: center;
+
+    font-size: 19px;
+    gap: 20px;
+}
+
+.banner img {
+    width: 400px;
+}
+
+.crests img {
+    width: 200px;
+}
+
+.pixel {
+
+    font-size: 19px;
+    color: var(--color-text);
+    text-align: center;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-primary);
+    box-shadow: inset 0 0 7px var(--color-accent);
+    align-items: center;
+
+}
+
+.pixel_bilder {
+    display: flex;
+    flex-direction: row;
+    height: 230px;
+    width: 1300px;
+    padding: 1rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+    gap: 12px;
+    margin-left: 3%;
+
+    border: 1px solid var(--color-primary);
+
+
+}
+
+
+
+footer {
+    grid-area: kontakt-info;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 180px;
+    padding-top: 1%;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text);
+}
